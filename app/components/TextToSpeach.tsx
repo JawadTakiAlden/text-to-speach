@@ -55,13 +55,13 @@ const TextToSpeech = () => {
         placeholder="Enter text to speak..."
       ></textarea>
       <select
-        value={voices[0].name}
+        value={voices[0]?.name}
     
       >
         {
-            voices.map((voice , i) => (
-                <option key={i} value={voice.name}>
-                    {`${voice.name} ${voice.lang}`}
+            voices?.map((voice , i) => (
+                <option key={i} value={voice?.name}>
+                    {`${voice?.name} ${voice?.lang}`}
                 </option>
             ))
         }
