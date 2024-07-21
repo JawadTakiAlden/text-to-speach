@@ -2,6 +2,7 @@
 // components/TextToSpeech.js
 import { useState, useEffect } from "react";
 
+
 const TextToSpeech = () => {
   const [text, setText] = useState("");
   const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
@@ -10,7 +11,7 @@ const TextToSpeech = () => {
   useEffect(() => {
     const synth = window.speechSynthesis;
     setVoices(synth.getVoices());
-  }, [window]);
+  }, [voiceSelctedIndex]);
 
   const detectLanguageAndSetVoice = (text: string) => {
     const arabicPattern = /[\u0600-\u06FF]/;
