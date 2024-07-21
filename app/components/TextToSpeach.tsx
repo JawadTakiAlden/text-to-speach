@@ -59,8 +59,8 @@ const TextToSpeech = () => {
     
       >
         {
-            voices.map((voice) => (
-                <option value={voice.name}>
+            voices.map((voice , i) => (
+                <option key={i} value={voice.name}>
                     {`${voice.name} ${voice.lang}`}
                 </option>
             ))
