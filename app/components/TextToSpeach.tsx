@@ -56,7 +56,10 @@ const TextToSpeech = () => {
       ></textarea>
       <br />
       {voices?.map((voice, i) => (
-        <h3 key={i}>{`${voice?.name} ${voice?.lang}`}</h3>
+        <h3 onClick={() => {
+            setVoiceSelectedIndex(i)
+            console.log('change')
+        }} key={i}>{`${voice?.name} ${voice?.lang}`}</h3>
       ))}
       <br />
       <button onClick={speak}>Speak</button>
