@@ -54,6 +54,18 @@ const TextToSpeech = () => {
         cols={50}
         placeholder="Enter text to speak..."
       ></textarea>
+      <select
+        value={voices[0].name}
+    
+      >
+        {
+            voices.map((voice) => (
+                <option value={voice.name}>
+                    {`${voice.name} ${voice.lang}`}
+                </option>
+            ))
+        }
+      </select>
       <button onClick={speak}>Speak</button>
     </div>
   );
