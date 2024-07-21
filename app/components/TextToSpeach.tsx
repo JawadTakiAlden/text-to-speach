@@ -10,7 +10,7 @@ const TextToSpeech = () => {
   useEffect(() => {
     const synth = window.speechSynthesis;
     setVoices(synth.getVoices());
-  }, []);
+  }, [window]);
 
   const detectLanguageAndSetVoice = (text: string) => {
     const arabicPattern = /[\u0600-\u06FF]/;
